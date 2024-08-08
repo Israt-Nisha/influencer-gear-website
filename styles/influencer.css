@@ -20,6 +20,7 @@
     border: none;
 }
 
+
 /* header styles */
 
 /* navbar styles */
@@ -76,7 +77,7 @@
 /* sponsors styles */
 .our-sponsors{
     max-width: 1100px;
-    margin: 0 auto;
+    margin: 80px auto;
     border-top: 1.5px #e6e1e1 solid ;
     border-bottom: 1.5px #e6e1e1 solid;
     padding: 25px;
@@ -85,12 +86,115 @@
     justify-content: space-evenly;
 }
 
+/* popular collection */
+
+.section-title{
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+.card-container{
+    max-width: 1100px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    
+}
+.card{
+    padding: 20px;
+    box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.20);
+}
+.card-img{
+    width: 100%;
+}
+.card-name{
+    font-weight: 500;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+.card-number{
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin-top: 5px;
+}
+.card-description{
+    color: #787885;
+}
+.see-more{
+    color: #E02C6D;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    display: block;
+    text-align: right;
+    margin-right: 120px;
+}
+
+/* feature styles */
+.feature{
+    margin-top: 120px;
+    justify-content: space-around;
+    align-items: center;
+}
+.feature-img{
+    width: 35%;
+}
+
+.feature-content{
+
+    width: 48%;
+}
+.feature-title{
+    font-weight: 700;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+
+}
+.feature-description{
+    margin-top: 5px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #787885;
+}
+.btn-feature{
+    background-color: #E02C6D;
+    color: white;
+    padding: 20px 25px;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    margin-bottom: 30px;
+}
+
+/* footer styles */
+footer{
+    margin: 130px 0;
+    padding: 50px;
+    text-align: center;
+    background-color: rgb(23, 23, 37);
+    color: white;
+}
+.footer-title{
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+.icons img{
+    filter: grayscale();
+    border: 1px solid rgb(73, 72, 72);
+    border-radius: 50%;
+    padding: 5px;
+    margin-left: 10px;
+}
 
 
 /* responsiv media query */
 /* mobile device */
 @media screen and (max-width: 576px) {
-    .navbar{
+    .navbar
+    {
         flex-direction: column;
     }
     .banner{
@@ -98,7 +202,7 @@
         background-position: top;
         background-size: 68%;
     }
-        
+    
     
     .banner-content{
         margin-top: 20px;
@@ -113,6 +217,26 @@
     
     
     }
+    .card-container{
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+   
+    .see-more{
+        margin: 0;
+        
+    }
+    .feature{
+        flex-direction: column-reverse;
+    } 
+    .feature-img,
+    .feature-content
+    {
+        
+        text-align: center;
+        width: 90%;
+    }
+
     
 }
 
@@ -135,6 +259,7 @@
         
     }
     .our-sponsors{
+
         flex-wrap: wrap;
         align-items: center;
         justify-items: center;
@@ -142,4 +267,15 @@
     
     
     }
+    .feature{
+        flex-direction: column-reverse;
+    } 
+    .feature-img,
+    .feature-content
+    {
+        
+   
+        width: 95%;
+    }
+ 
 }
